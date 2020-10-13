@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Blog;
+use App\Contact;
 use App\CustomerQuestion;
 use App\PostDetails;
 use App\Product;
@@ -168,5 +169,22 @@ class FrontendController extends Controller
         return view('front.contact.contact', [
             'product_show' => $product_show,
         ]);
+    }
+
+    public function contactUsStore(Request $request)
+    {
+        $this->validate($request, [
+            'product_id' => 'required',
+            'message' => 'required',
+            'email' => 'required',
+            'phone' => 'required'
+        ]);
+        $contact = Contact::create([
+            'product_id' => $request->product_id,
+            'message' => $request->message,
+            'email' => $request->email,
+            'phone' => $request->phone,
+        ]);
+        return redirect()->back()->with('message', 'Your information has been successfully submitted. Thank you for Contact Us');
     }
 }

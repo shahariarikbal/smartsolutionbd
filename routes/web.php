@@ -23,6 +23,7 @@ Route::get('/product/details/{id}', 'FrontendController@product_details');
 Route::get('/service/register', 'FrontendController@product_service_register');
 Route::post('/product/service/request', 'FrontendController@product_service_request');
 Route::get('/contact-us', 'FrontendController@contactUs');
+Route::post('/contact-info-store', 'FrontendController@contactUsStore');
 
 Auth::routes(['register' => false, '.env' => false]);
 
