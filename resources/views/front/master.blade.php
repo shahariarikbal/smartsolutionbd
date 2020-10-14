@@ -3,10 +3,10 @@
 <head>
     <!-- Basic -->
     <meta charset="utf-8">
-    <title>SmartSolutionBd</title>
+    <title>Smart Solution</title>
     <meta name="keywords" content="HTML5 Template" />
     <meta name="description" content="Smart-Solution">
-    <meta name="author" content="iwthemes.com">
+    <meta name="author" content="smartsolutionbd.com">
 
     <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>

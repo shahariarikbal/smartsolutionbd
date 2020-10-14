@@ -65,7 +65,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-5" style="height: 370px; margin-left: 30px; margin-top: 50px;">
+                            <div class="col-md-5" style="height: 370px; margin-left: 80px; margin-top: 50px;">
                                 <span style="padding-top: 30px; font-size: 24px; color: #000000; font-weight: 400">Head Office </span><br/><br/>
                                 <span style="padding-top: 30px; font-size: 24px; color: #000000">Dhaka </span><br/>
                                 <span style="color: black; font-family: sans-serif">
@@ -85,7 +85,6 @@
         </div>
     </section>
     <!-- End Services-->
-
     <!-- Services Slide -->
     <section class="content_info">
         <!-- Parallax Background -->

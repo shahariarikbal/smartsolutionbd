@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Contact;
 use App\Register;
 use Illuminate\Http\Request;
 
@@ -24,7 +25,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $show_register_person = Register::orderBy('id', 'desc')->get();
-        return view('back.home.index', compact('show_register_person'));
+        $showContactInfo = Contact::with('product')->orderBy('id', 'desc')->get();
+        return view('back.home.index', compact('showContactInfo'));
     }
 }

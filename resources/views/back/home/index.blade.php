@@ -92,31 +92,27 @@
         </div>
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header"><h2 style="text-align: center;">Registration Customers List</h2></div>
+                <div class="card-header"><h2 style="text-align: center;">Contact Us Information</h2></div>
             </div>
             <table class="table table-bordered">
                 <tr>
                     <th>SL</th>
-                    <th>Name</th>
-                    <th>Phone</th>
+                    <th>Service</th>
                     <th>Email</th>
-{{--                    <th>Service</th>--}}
-                    <th>Comment</th>
-                    <th>Action</th>
+                    <th>Phone</th>
+                    <th>Message</th>
                 </tr>
-                @foreach($show_register_person as $key => $show_register)
-                <tr>
-                    <td>{{ $key+1 }}</td>
-                    <td>{{ $show_register->name }}</td>
-                    <td>{{ $show_register->phone_number }}</td>
-                    <td>{{ $show_register->email }}</td>
-{{--                    <td>{!! $show_register->service !!}</td>--}}
-                    <td>{!! $show_register->service_details !!}</td>
-                    <td>
-                        <a href="" class="btn btn-danger">Delete</a>
-                    </td>
-                </tr>
-                @endforeach
+                @if(!empty($showContactInfo))
+                    @foreach($showContactInfo as $key => $showContact)
+                        <tr>
+                            <td>{{ $key+1 }}</td>
+                            <td>{{ $showContact->product->name }}</td>
+                            <td>{{ $showContact->email }}</td>
+                            <td>{{ $showContact->phone }}</td>
+                            <td>{!! substr($showContact->message, 0, 50) !!}</td>
+                        </tr>
+                    @endforeach
+                @endif
             </table>
         </div>
     </div>
